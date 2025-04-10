@@ -1,0 +1,41 @@
+smeta: Смета: {
+  Заработная плата рабочих-строителей
+  Отчисление на соц страх 12%
+  Строительные материалы
+  Эксплуатация машин и механизмов
+  direct_cost: ИТОГО  ПРЯМЫЕ  ЗАТРАТЫ
+  mist_prod_cost: Прочие затраты производственного характера
+  mist_cost: Прочие расходы
+  total_current_cost: ИТОГО СТОИМОСТЬ В ТЕКУЩИХ ЦЕНАХ
+  equipment: ОБОРУДОВАНИЕ
+  total_without_NDS: ИТОГО БЕЗ НДС
+  NDS: НДС 12%
+  toal_with_NDS: ИТОГО С НДС
+  misc_owner_cost: Прочие расходы заказчика
+  total_with_owner_cost: ВСЕГО С ПРОЧИМИ РАСХОДАМИ ЗАКАЗЧИКА
+
+  Заработная плата рабочих-строителей -> direct_cost
+  Отчисление на соц страх 12% -> direct_cost
+  Строительные материалы -> direct_cost
+  Эксплуатация машин и механизмов -> direct_cost
+
+  direct_cost -> mist_prod_cost
+
+  direct_cost -> mist_cost
+  mist_prod_cost -> mist_cost
+
+  direct_cost -> total_current_cost
+  mist_prod_cost -> total_current_cost
+  mist_cost -> total_current_cost
+
+  total_current_cost -> total_without_NDS
+  equipment -> total_without_NDS
+
+  total_without_NDS -> NDS
+
+  total_without_NDS -> toal_with_NDS
+  NDS-> toal_with_NDS
+
+  toal_with_NDS -> total_with_owner_cost
+  misc_owner_cost-> total_with_owner_cost
+}

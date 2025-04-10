@@ -1,0 +1,26 @@
+amortisation: Амортизация: {
+  cost: Стоимость амортизируемых средств: {
+    construction: СМР
+    equipment: Оборудование
+    mist: Прочие
+  }
+
+  payment: Амортизациионные отчисления: {
+    construction: СМР
+    equipment: Оборудование
+    mist: Прочие
+  }
+
+   residual: Остаточная стоимость амортизируемых средств: {
+    construction: СМР
+    equipment: Оборудование
+    mist: Прочие
+  }
+  main_eq_for_tax: Основные средства для налога на имущество
+
+  cost -> main_eq_for_tax
+  cost.equipment -> main_eq_for_tax
+
+  residual -> main_eq_for_tax
+  residual.equipment -> main_eq_for_tax
+}

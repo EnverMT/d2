@@ -1,0 +1,22 @@
+credit: Кредит: {
+  total_credit_cost: Сумма кредита
+  days_in_year: Количество дней в году
+  interest_rate: Процентная ставка
+  sum_take: Сумма выборки
+  sum_pay: Сумма погашения
+  sum_obligation: Сумма обязательство
+  sum_debt: Сумма задолженность
+  interest_cost: Проценты за кредит
+  organisiation_cost: Процент за организацию
+  obligation_cost: Процент за обязательство
+
+  total_credit_cost -> sum_obligation
+  sum_take -> sum_obligation
+
+  sum_take -> sum_debt
+  sum_pay -> sum_debt
+
+  interest_rate -> interest_cost
+  days_in_year -> interest_cost
+  sum_debt -> interest_cost
+}

@@ -1,0 +1,45 @@
+...@fin_lab_calc
+...@fin_plan_prod
+net_cost: Себестоимость {
+  prod_mat_expances: Производственные материальные затраты {
+    raw: сырьё, материалы и комплектующие
+    energy: энергоресурсы (топливо и энергия)
+    catalyst: катализаторы
+    salary: зарплата
+    ESP: ЕСП
+    general_prod_cost: Общепроизводственные расходы
+    amortisation: амортизация
+  }
+
+  lab: ЛАБ: {
+    raw: Сырье и материалы: {
+      kerosene: Керосин
+      benzol: Бензол
+    }
+
+    energy: Энергоресурсы: {
+      elektr: электроэнергия
+      gas: природный газ
+      water: вода
+      air: сжатый воздух
+    }
+
+    catalyst: Катализаторы: {
+      molex: Molex (адсорбент)
+      pacol: Pacol (катализатор)
+      define: DeFine (катализатор)
+      pep: PEP (адсорбент)
+      detal: Detal-Plus (катализатор)
+    }
+
+    salary: Заработная плата
+    ESP: ЕСП
+    general_prod_cost: Общепроизводственные расходы
+  }
+}
+
+lab_calc.raw_material.kerosene -> net_cost.lab.raw.kerosene
+prodPlan.readyProduct -> net_cost.lab.raw.kerosene
+
+lab_calc.raw_material.benzol -> net_cost.lab.raw.benzol
+prodPlan.readyProduct -> net_cost.lab.raw.benzol

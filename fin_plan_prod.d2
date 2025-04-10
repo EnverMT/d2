@@ -1,0 +1,16 @@
+...@fin_raschet_tsena
+...@fin_init_data
+
+prodPlan: План производства: {
+  readyProduct: Готовая продукция
+  readyProductPile: Запасы готовой продукции
+  realisation: Реализация
+  realisation_revenue: Выручка от реализации
+
+  readyProduct -> readyProductPile
+  readyProduct -> realisation
+  readyProductPile -> realisation
+}
+
+calc_cost.lab.cost -> prodPlan.realisation_revenue
+init.obor.export_sell_period -> prodPlan.readyProductPile

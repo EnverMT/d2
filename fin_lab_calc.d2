@@ -1,0 +1,34 @@
+...@fin_init_data
+
+lab_calc: КАЛЬКУЛЯЦИЯ на огнеупорные хромитопериклазовые изделия марки ХПТ по ТУ 14-7-133-99 {
+  raw_material: Сырье {
+    kerosene: Керосин (U50)
+    benzol: Бензол
+  }
+  fuel: Топливо на технологические нужды {
+    gas: Газ природный
+  }
+  energy: Энергия на технологические цели: {
+    electricity: Электроэнергия
+    water: Вода
+    air: Сжатый воздух
+  }
+
+  salary: Основная заработная плата производственных рабочих
+  social_tax: Социальный налог
+  general_cost: Общепроизводственные расходы
+  shop_cost: Цеховая себестоимость
+  prod_cost: Производственная  себестоимость
+
+  salary -> social_tax
+
+  raw_material -> shop_cost
+  fuel -> shop_cost
+  energy -> shop_cost
+  salary -> shop_cost
+  social_tax -> shop_cost
+  general_cost -> shop_cost
+
+  shop_cost -> prod_cost
+}
+init.target_deductions.SSP -> lab_calc.social_tax

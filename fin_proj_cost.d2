@@ -1,0 +1,17 @@
+proj_cost: Стоимость проекта: {
+  capital_cost: Капитальные затраты {
+    construction: СМР
+    equipment: Оборудование
+    misc: Прочие
+  }
+
+  financial_cost: Финансовые издержки в инвестиционный период {
+    tax_cost: Сбор за таможенное оформление (0,2%)
+    declare_cost: Расходы по декларированию
+  }
+
+  invest_cost: Инвестиции в реализацию проекта
+
+  capital_cost -> invest_cost
+  financial_cost -> invest_cost
+}
